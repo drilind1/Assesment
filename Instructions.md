@@ -3,8 +3,8 @@ Thank you for your interest in this role! To help us assess your fit for this pr
 You will have 3 tasks:
 
 Task 1: Code Generation with an LLM
-//1. Prompt Creation: Write a prompt to generate Python (or language of your choice) code that implements a RESTful API with two endpoints (e.g., /add and /subtract).
-//2. Code Evaluation: Use any LLM you have access to (e.g., OpenAI GPT, Anthropic Claude) to generate 3-5 different versions of the code.
+1. Prompt Creation: Write a prompt to generate Python (or language of your choice) code that implements a RESTful API with two endpoints (e.g., /add and /subtract).
+2. Code Evaluation: Use any LLM you have access to (e.g., OpenAI GPT, Anthropic Claude) to generate 3-5 different versions of the code.
 3. Selection: Evaluate the generated versions, select the best one, and explain your reasoning in 200-300 words.
 4. Enhancement: Modify the selected code to improve its performance or design (e.g., error handling, input validation) and highlight the changes made.
 Deliverable: Submit your prompt, the generated code versions, your reasoning for selecting the best one, and your enhanced code.
