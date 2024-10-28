@@ -17,9 +17,5 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-app.UseEndpoints(x =>
-{
-    x.AddCalculatorEndpoints();
-});
+app.AddCalculatorEndpoints();
 app.Run();

@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstSonnet3.5Response", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecondSonnet3.5Response", "SecondSonnet3.5Response\SecondSonnet3.5Response.csproj", "{837A55BF-9B5E-4660-99FB-15C2FFC0D84D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnhancedProject", "EnhancedProject\EnhancedProject.csproj", "{524650C9-9503-4D79-9983-4B0C40969412}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{837A55BF-9B5E-4660-99FB-15C2FFC0D84D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{837A55BF-9B5E-4660-99FB-15C2FFC0D84D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{837A55BF-9B5E-4660-99FB-15C2FFC0D84D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{524650C9-9503-4D79-9983-4B0C40969412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{524650C9-9503-4D79-9983-4B0C40969412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{524650C9-9503-4D79-9983-4B0C40969412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{524650C9-9503-4D79-9983-4B0C40969412}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

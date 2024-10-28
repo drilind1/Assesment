@@ -11,3 +11,6 @@ This file contains evaluations of responses from different AI models, ChatGPT 4o
 
 ### [Selection](Generations\Selection.md)
 It includes the chosen response and the reasoning behind it.
+
+### [Code](Code/)
+It includes the Projects from the AI model responses, and the enhanced one.
