@@ -9,7 +9,7 @@ This file contains a prompt for creating a RESTful API with two endpoints: `/add
 ## [Evaluation](Generations/Evaluation.md)
 This file contains evaluations of responses from different AI models, ChatGPT 4o and Claude Sonnet 3.5.
 
-### [Selection](Generations\Selection.md)
+### [Selection](Generations/Selection.md)
 It includes the chosen response and the reasoning behind it.
 
 ### [Code](Code/)
