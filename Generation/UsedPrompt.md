@@ -1,0 +1,4 @@
+Act as a Senior .NET software development and create a RESTful API with 2 endpoints 
+1. /add which will take 2 numbers as parameters either on body or URI depending which ever you find more adequate for this endpoint the only responsibility of this endpoint will be to addition those 2 numbers and return the result, take into consideration creating input validation, error handling and having a good performance.
+2. /subtract which will also take 2 parameters either on body or URI depending which ever you find more adequate for this endpoint, the only responsibility of this endpoint should be to subtract the inserted values and return the result, take into consideration creating validation, error handling and a good performance.
+Also include a DockerFile which will be used to create a clean image of this service which will be easy deployed into a container
