@@ -30,8 +30,6 @@ public class CalculatorModule : ICarterModule
             }
             catch (Exception ex)
             {
-                // Fixed: Incorrect usage/ compile error
-                // an exception log would also be good to be here and log the stacktrace
                 // Results.StatusCode(500, new ErrorResponse
                 // {
                 //     Message = "An error occurred while processing your request",

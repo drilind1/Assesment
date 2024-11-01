@@ -3,7 +3,7 @@ using EnhancedProject.Models;
 
 namespace EnhancedProject.Validators;
 
-public abstract class CalculationRequestValidator : AbstractValidator<CalculationRequest>
+public class CalculationRequestValidator : AbstractValidator<CalculationRequest>
 {
     public CalculationRequestValidator()
     {
