@@ -1,5 +1,5 @@
 # Selection
-So from the 4 of the [Evaluated Responses](/Generations/Evaluation.md).
+So from the 4 of the [Evaluated Responses](/Evaluation.md).
 I have chosen the [4th one generated using Claude 3.5 Sonnet](/Generations/4.Claude%203.5%20Sonnet%20(New)/response.md).
 
 ## Reasoning

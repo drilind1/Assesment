@@ -1,6 +1,6 @@
 # Evaluating Responses
 
-## [1st Response from ChatGPT 4o:](1.ChatGPT-4o/Response.md.md)
+## [1st Response from ChatGPT 4o:](Generations/1.ChatGPT-4o/Response.md)
 
 Did not give detailed instruction on how to create the project it did not include the required project packages.
 
@@ -16,7 +16,7 @@ It suggests to use a controller which for this scenario would prefer using minim
 
 Over all this response is not good and has a lot room for improvement.
 
-##  [2nd Response from ChatGPT 4o:](2.ChatGPT-4o/Response.md.md)
+##  [2nd Response from ChatGPT 4o:](Generations/2.ChatGPT-4o/Response.md)
 
 It suggested to use `dotnet new webapi -n ArithmeticApi` which is a good stepto start with, but this template also includes `WeatherForecast` examplewhich the model does not suggest to delete which leaves more clutter.
 
@@ -30,7 +30,7 @@ Did not create an easy maintainable structure of the project.
 
 Overall this response works but it has a lot of room for improvement
 
-##  [3rd Response from Claude Sonnet 3.5 (New version):](3.Claude%203.5%20Sonnet%20(New)//Response.md)
+##  [3rd Response from Claude Sonnet 3.5 (New version):](Generations/3.Claude%203.5%20Sonnet%20(New)//Response.md)
 It uses the latest .Net Core version 8.0 so this is good.
 
 It uses minimal APIs but they are all in the Program.cs file
@@ -43,7 +43,7 @@ It handles errors like the Overflow exception and it returns a detailed failed r
 
 Overall this is better response than the ChatGPT with 4o model, but it misses a cleaner project structure which can make the project harder to maintain and it includes some invalid validation checks
 
-## [4th response from Claude Sonnet 3.5 (New version):](4.Claude%203.5%20Sonnet%20(New)//Response.md)
+## [4th response from Claude Sonnet 3.5 (New version):](Generations/4.Claude%203.5%20Sonnet%20(New)//Response.md)
 
 It has all the good things of 3rd response and it gives instructions of a lot better project structure it separates the models in directories this makes the project a lot better and easier to maintain.
 
