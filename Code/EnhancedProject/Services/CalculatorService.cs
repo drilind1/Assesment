@@ -23,7 +23,7 @@ public class CalculatorService(ILogger<CalculatorService> logger, IValidator<Cal
                 new CalculationResponse
                 {
                     Result = result!.Value,
-                    Operation = "Addition"
+                    Operation = Operations.Addition.ToString()
                 });
         }
         catch (Exception ex)
@@ -52,7 +52,7 @@ public class CalculatorService(ILogger<CalculatorService> logger, IValidator<Cal
                 new CalculationResponse
                 {
                     Result = result!.Value,
-                    Operation = "Addition"
+                    Operation = Operations.Subtraction.ToString()
                 });
         }
         catch (Exception ex)

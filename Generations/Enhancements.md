@@ -70,3 +70,10 @@ I introduced unit testing for the business logic of the calculations.
 First I needed to separate the logic to a separate Service for separating concerns and making it easier to test. 
 
 So all the Service is covered with unit testing this will make sure that any new change or feature which will be added won't break the functionality of the existing code.
+
+The unit testing can be moved to a separate project but to make things simple they are inside the same project. 
+Libraries like Xunit, FluentAssertion and Moq have been introduced to make the unit testing easier.
+
+Introduced the Results class which is going to make it easier to define the result pattern if it was an failure or success.
+
+##

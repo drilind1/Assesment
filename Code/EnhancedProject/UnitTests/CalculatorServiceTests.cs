@@ -11,14 +11,13 @@ namespace EnhancedProject.UnitTests;
 public class CalculatorServiceTests
 {
     private readonly CalculatorService _calculatorService;
-    private readonly Mock<ILogger<CalculatorService>> _loggerMock;
     private readonly Mock<IValidator<CalculationRequest>> _validatorMock;
 
     public CalculatorServiceTests()
     {
         _validatorMock = new Mock<IValidator<CalculationRequest>>();
-        _loggerMock = new Mock<ILogger<CalculatorService>>();
-        _calculatorService = new CalculatorService(_loggerMock.Object, _validatorMock.Object);
+        Mock<ILogger<CalculatorService>> loggerMock = new();
+        _calculatorService = new CalculatorService(loggerMock.Object, _validatorMock.Object);
     }
 
     [Fact]
@@ -43,6 +42,7 @@ public class CalculatorServiceTests
         calculationResponse.IsFailure.Should().BeFalse();
         calculationResponse.Value?.Should().NotBeNull();
         calculationResponse.Value!.Result.Should().Be(expectedResult);
+        calculationResponse.Value!.Operation.Should().Be(Operations.Addition.ToString());
     }
 
     [Fact]
@@ -114,6 +114,7 @@ public class CalculatorServiceTests
         calculationResponse.IsFailure.Should().BeFalse();
         calculationResponse.Value?.Should().NotBeNull();
         calculationResponse.Value!.Result.Should().Be(expectedResult);
+        calculationResponse.Value!.Operation.Should().Be(Operations.Subtraction.ToString());
     }
 
     [Fact]
