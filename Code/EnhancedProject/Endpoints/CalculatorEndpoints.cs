@@ -8,8 +8,7 @@ public static class CalculatorEndpoints
 {
     public static void AddCalculatorEndpoints(this IEndpointRouteBuilder app)
     {
-        var calculatorService = app.ServiceProvider.GetRequiredService<ICalculatorService>();
-        app.MapPost("/add", async ([FromBody] CalculationRequest request) =>
+        app.MapPost("/add", async ([FromBody] CalculationRequest request, ICalculatorService calculatorService) =>
             {
                 var result = await calculatorService.Addition(request);
 
@@ -18,7 +17,7 @@ public static class CalculatorEndpoints
             .WithName("Add")
             .WithOpenApi();
 
-        app.MapPost("/subtract", async ([FromBody] CalculationRequest request) =>
+        app.MapPost("/subtract", async ([FromBody] CalculationRequest request, ICalculatorService calculatorService) =>
             {
                 var result = await calculatorService.Subtraction(request);
 
