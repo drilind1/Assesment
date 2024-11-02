@@ -5,7 +5,9 @@ The Calculator API testing was implemented using a simple `.http` file, which pr
 
 ## Test Setup
 - File: [CalculatorAPI.http](Code/EnhancedProject/CalculatorAPI.http)
-- Base URL: Configured using a variable `{{url}}` which can be change based on the environments
+- Base URL: Configured using a variable `{{url}}` which can be change based on the environments 
+    - Local: `http://localhost:5242`
+    - Cloud: `https://calculator.drilind.com`
 - Content Type: All requests use `application/json`
 
 ## Test Scenarios

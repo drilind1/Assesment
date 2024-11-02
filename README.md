@@ -14,3 +14,12 @@ It includes the chosen response and the reasoning behind it.
 
 ### [Code](Code/)
 It includes the Projects from the AI model responses, and the [enhanced one](/Code/EnhancedProject/).
+
+### [Deployment](Deployment.md)
+Documentation of the deployment process used for deployed the enhanced calculator project
+
+### [Testing](Testing.md)
+It includes the documentation on how the acceptance testing was done.
+
+### [Write Up](WriteUp.md)
+It includes a description on my experience with LLMs and my experience with deployments.
