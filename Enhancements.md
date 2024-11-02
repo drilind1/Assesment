@@ -77,9 +77,10 @@ Libraries like Xunit, FluentAssertion and Moq have been introduced to make the u
 Introduced the Results class which is going to make it easier to define the result pattern if it was an failure or success.
 
 ## Improve the validation
-Adding more rules for different invalid number values 
+Adding more rules for different invalid number values and not check the other conditions if the value is null
 ```csharp
 RuleFor(x => x.Number1)
+    .Cascade(CascadeMode.Stop)
     .NotNull()
     .WithMessage("Number1 is required")
     .Must(x => !double.IsInfinity(x!.Value))
@@ -88,6 +89,7 @@ RuleFor(x => x.Number1)
     .WithMessage("Number1 must be a valid number");
 
 RuleFor(x => x.Number2)
+    .Cascade(CascadeMode.Stop)
     .NotNull()
     .WithMessage("Number2 is required")
     .Must(x => !double.IsInfinity(x!.Value))

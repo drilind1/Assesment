@@ -1,0 +1,124 @@
+﻿### Test adding two valid numbers
+POST {{url}}/add
+Content-Type: application/json
+
+{
+  "number1": 5,
+  "number2": 3
+}
+
+> {%
+    client.test("Add valid numbers test", function () {
+        client.assert(response.status === 200, "Response status should be 200");
+        client.assert(response.contentType.mimeType === "application/json", "Response should be JSON");
+        client.assert(response.body.result === 8, "5 + 3 should equal 8");
+    });
+%}
+
+### Test adding with negative numbers
+POST {{url}}/add
+Content-Type: application/json
+
+{
+  "number1": -5,
+  "number2": 3
+}
+
+> {%
+    client.test("Add negative numbers test", function () {
+        client.assert(response.status === 200, "Response status should be 200");
+        client.assert(response.body.result === -2, "-5 + 3 should equal -2");
+    });
+%}
+
+### Test adding with missing parameters
+POST {{url}}/add
+Content-Type: application/json
+
+{
+  "number1": 5
+}
+
+> {%
+    client.test("Add missing parameters test", function () {
+        client.assert(response.status === 400, "Response status should be 400");
+        client.assert(response.body[0] === "Number2 is required", "Should show Number2 required message");
+    });
+%}
+
+### Test adding with invalid input (non-numeric)
+POST {{url}}/add
+Content-Type: application/json
+
+{
+  "number1": "abc",
+  "number2": 3
+}
+
+> {%
+    client.test("Add invalid input test", function () {
+        client.assert(response.status === 400, "Response status should be 400");
+    });
+%}
+
+### Test subtracting two valid numbers
+POST {{url}}/subtract
+Content-Type: application/json
+
+{
+  "number1": 10,
+  "number2": 3
+}
+
+> {%
+    client.test("Subtract valid numbers test", function () {
+        client.assert(response.status === 200, "Response status should be 200");
+        client.assert(response.body.result === 7, "10 - 3 should equal 7");
+    });
+%}
+
+### Test subtracting with negative numbers
+POST {{url}}/subtract
+Content-Type: application/json
+
+{
+  "number1": -10,
+  "number2": 3
+}
+
+> {%
+    client.test("Subtract negative numbers test", function () {
+        client.assert(response.status === 200, "Response status should be 200");
+        client.assert(response.body.result === -13, "-10 - 3 should equal -13");
+    });
+%}
+
+### Test subtracting with missing parameters
+POST {{url}}/subtract
+Content-Type: application/json
+
+{
+  "number2": 3
+}
+
+> {%
+    client.test("Subtract missing parameters test", function () {
+        client.assert(response.status === 400, "Response status should be 400");
+        client.assert(response.body[0] === "Number1 is required", "Should show Number1 required message");
+    });
+%}
+
+### Test subtracting with invalid input
+POST {{url}}/subtract
+Content-Type: application/json
+
+{
+  "number1": "abc",
+  "number2": 3
+}
+
+> {%
+    client.test("Subtract invalid input test", function () {
+        client.assert(response.status === 400, "Response status should be 400");
+    });
+%}

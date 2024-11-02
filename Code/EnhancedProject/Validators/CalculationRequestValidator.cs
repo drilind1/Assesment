@@ -8,6 +8,7 @@ public class CalculationRequestValidator : AbstractValidator<CalculationRequest>
     public CalculationRequestValidator()
     {
         RuleFor(x => x.Number1)
+            .Cascade(CascadeMode.Stop)
             .NotNull()
             .WithMessage("Number1 is required")
             .Must(x => !double.IsInfinity(x!.Value))
@@ -16,6 +17,7 @@ public class CalculationRequestValidator : AbstractValidator<CalculationRequest>
             .WithMessage("Number1 must be a valid number");
 
         RuleFor(x => x.Number2)
+            .Cascade(CascadeMode.Stop)
             .NotNull()
             .WithMessage("Number2 is required")
             .Must(x => !double.IsInfinity(x!.Value))
